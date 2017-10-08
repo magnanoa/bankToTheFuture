@@ -1,2 +1,2 @@
 # bankToTheFuture
-Bank To the Future Awsome AI OMS System
+Bank To the Future Awesome AI OMS System
