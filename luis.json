@@ -346,6 +346,22 @@
           "endPos": 34
         }
       ]
+    },
+    {
+      "text": "sell 2000 shares of ibm",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 22
+        }
+      ]
     }
   ]
 }
