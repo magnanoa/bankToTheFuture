@@ -1,0 +1,19 @@
+{
+  "name": "bot-alpha",
+  "version": "1.0.0",
+  "description": "Hello world bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.10.2",
+    "dotenv-extended": "^2.0.0",
+    "restify": "^6.0.1",
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4",
+    "schema-inspector": "^1.6.8"
+  }
+}

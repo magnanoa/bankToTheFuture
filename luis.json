@@ -1,0 +1,351 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "Venus",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Communication.Confirm",
+      "inherits": {
+        "domain_name": "Communication",
+        "model_name": "Confirm"
+      }
+    },
+    {
+      "name": "Communication.StartOver",
+      "inherits": {
+        "domain_name": "Communication",
+        "model_name": "StartOver"
+      }
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Order"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Communication.Message",
+      "inherits": {
+        "domain_name": "Communication",
+        "model_name": "Message"
+      }
+    },
+    {
+      "name": "Communication.OrderReference",
+      "inherits": {
+        "domain_name": "Communication",
+        "model_name": "OrderReference"
+      }
+    },
+    {
+      "name": "OrderDirection",
+      "children": [
+        "Buy",
+        "Sell"
+      ]
+    },
+    {
+      "name": "OrderType",
+      "children": [
+        "Limit",
+        "Market"
+      ]
+    }
+  ],
+  "composites": [
+    {
+      "name": "Order",
+      "children": [
+        "Stocks",
+        "OrderDirection",
+        "OrderType",
+        "number"
+      ]
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "Stocks",
+      "subLists": [
+        {
+          "canonicalForm": "Apple",
+          "list": []
+        },
+        {
+          "canonicalForm": "Optus",
+          "list": []
+        },
+        {
+          "canonicalForm": "Microsoft",
+          "list": []
+        },
+        {
+          "canonicalForm": "sony",
+          "list": []
+        },
+        {
+          "canonicalForm": "dell",
+          "list": []
+        },
+        {
+          "canonicalForm": "ibm",
+          "list": []
+        }
+      ]
+    }
+  ],
+  "bing_entities": [
+    "money",
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "yes",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "sounds good",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "order something",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i would like to place an order",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "Order",
+          "startPos": 16,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "i need to place an order",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "Order",
+          "startPos": 10,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "perfect thank you",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "that ' s right",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "buy microsoft",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "No doubt Okay",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "okay i hear that",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "yes call",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "do it all over again ?",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "get out of the call",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "Restart now",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "how do i change the phone number for Jack ?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "mark all email messages as read",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "\" yes please , send it  \"",
+      "intent": "Communication.Confirm",
+      "entities": []
+    },
+    {
+      "text": "\" Please , restart now  \"",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "i ' ll start again",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "let ' s try this whole thing over",
+      "intent": "Communication.StartOver",
+      "entities": []
+    },
+    {
+      "text": "Take me to tennessee",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Communication.Message",
+          "startPos": 0,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "start speaker . cancel",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sell some company",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i would like to buy some stock",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 16,
+          "endPos": 18
+        },
+        {
+          "entity": "Order",
+          "startPos": 16,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "order something now",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "place order to buy optus",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 15,
+          "endPos": 17
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "place a market order to sell ibm stock",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 24,
+          "endPos": 27
+        },
+        {
+          "entity": "OrderType",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "buy 100 sony shares at market price",
+      "intent": "Order",
+      "entities": [
+        {
+          "entity": "OrderDirection",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "Order",
+          "startPos": 0,
+          "endPos": 34
+        }
+      ]
+    }
+  ]
+}
