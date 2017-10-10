@@ -1,14 +1,18 @@
 # OMS with MS Bot framework + LUIS recogniser
 
 * Bot integration with Luis via LuisRecognizer
-![Happy Case](doc/img/bot-v1-happy-case.png)
+
+    ![Happy Case](doc/img/bot-v1-happy-case.png)
 
 * Order dialog with homemade Luis entity validation via waterfall
-![Waterfall](doc/img/bot-v1-waterfall.png)
+
+    ![Waterfall](doc/img/bot-v1-waterfall.png)
 
 * Basic support for validation exceptions and interruptions
-![Validation exception](doc/img/bot-v1-exceptions.png)
-![Validation exception](doc/img/bot-v1-exceptions2.png)
+
+    ![Validation exception](doc/img/bot-v1-exceptions.png)
+
+    ![Validation exception](doc/img/bot-v1-exceptions2.png)
 
 ### Issues / Next Steps
 * Can we make use of [LUIS action binding example framework](https://github.com/ahilton/BotBuilder-Samples/tree/master/Node/blog-LUISActionBinding) to do a better job of LUIS entity validation
